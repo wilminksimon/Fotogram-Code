@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/favIcon.png" type="image/x-icon">
+</head>
+
+<body onload="renderThumbnails()">
+    <header class="main-header">
+        <a href="index.html" class="logo-header"><img src="/img/fotogram-logo.png" alt="Logo-Fotogram"></a>
+    </header>
+
+    <main>
+        <div class="wrapper">
+        <h1>Your personal photo album</h1>
+        <section class="photo-gallery" id="thumbnails"></section>
+
+        <dialog class="dialog-window" onclick="closeDialog()" id="myDialog" aria-labelledby="dialog-title">
+            <div class="moblie-full-screen-height-adjust" onclick="eventBubblingProtection(event)">
+                <header class="dialog-header">
+                    <h2 id="dialog-title"></h2>
+                    <button onclick="closeDialog()" class="close-btn"><img src="/img/close.png" alt=""></button>
+                </header>
+
+                <section class="dialog-img-section">
+                    <img id="dialog-img" src="" alt="">
+                </section>
+
+                <footer class="dialog-footer">
+                    <button class="arrow arrowLeft" onclick="prevImage()"><img src="/img/Union.png"
+                            alt="arrow-previous-Image"></button>
+                    <span id="image-counter"></span>
+                    <button class="arrow arrowRight" onclick="nextImage()"><img src="/img/Union.png"
+                            alt="arrow-next-Image"></button>
+                </footer>
+            </div>
+        </dialog>
+                
+</div>
+    </main>
+
+    <footer class="main-footer">
+        <img src="/img/footer-logo.png" alt="logo/copyright">
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
