@@ -40,6 +40,7 @@ function openDialog(index) {
     dialogImg.src = myImgs[index];
     imageCounter.innerText = `${index + 1} / ${myImgs.length}`;
     dialogRef.showModal();
+    dialogRef.focus();
 }
 
 function closeDialog() {
