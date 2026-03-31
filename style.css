@@ -13,6 +13,10 @@ body {
     font-family: "Figtree";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* header */
 
 .main-header {
@@ -63,13 +67,28 @@ h1 {
 }
 
 .renderedThumbnails {
-    display: contents;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.previewImages:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .previewImages {
     width: 120px;
     height: 120px;
     border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.previewImages:hover {
+    opacity: 1;
 }
 
 /* Dialog */
@@ -126,6 +145,7 @@ h1 {
 .dialog-img-section {
     display: flex;
     align-items: center;
+    height: 384px;
 }
 
 .dialog-footer {
@@ -180,6 +200,8 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+
 
 /* mobile */
 

@@ -33,7 +33,7 @@ function renderThumbnails() {
 }
 
 function openDialog(index) {
-    let fileName = myImgs[index].split("/").pop();
+    let fileName = myImgs[index].split("/").pop();  //remove / and display only the Last component
 
     currentIndex = index;
     dialogTitle.innerText = fileName;
